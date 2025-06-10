@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <form action="" id="formulario">
+      <div class="info">
+        <h1>Inscrição nos cursos FIC <img src="/public/moon-star 1.svg" alt=""></h1>
+        <p>Prazo para responder: <strong>05/05/2025</strong></p>
+      </div>
+      <div class="dados">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Ex.:Maria de Oliveira">
+      </div>
+      <div class="dados">
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Ex.:maria.oliveira@gmail.com">
+      </div>
+      <div class="dados">
+        <label for="sexo">Sexo</label>
+        <input type="radio" name="sexo" id="sexo_masculino">
+        <label for="sexo_masculino">Masculino</label>
+        <input type="radio" name="sexo" id="sexo_feminino">
+        <label for="sexo_feminino">Feminino</label>
+      </div>
+      <div class="dados">
+        <label for="curso">Curso</label>
+        <select name="" id="">
+          <option value="">HTML e CSS</option>
+        </select>
+      </div>
+      <div class="dados">
+        <label for="observacao">Descreva o atendimento especial(opcional):</label>
+        <input type="text">
+      </div>
+      <div class="dados">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">Estou de acordo com os termos de serviço</label>
+      </div>
+      <div>Os campos marcados com * são obrigatórios</div>
+      <div id="botao">
+        <input type="submit" value="Realizar inscrição">
+      </div>
+     </form>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

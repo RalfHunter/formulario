@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.info, .dados {
+  background-color: #F1F1F199;
+  border-radius: 0px 8px 8px 0px;
+}
+.info {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+  padding-bottom: 22px;
+  padding-top: 25px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.info > h1 {
+  display: flex;
+  justify-content: space-between;
+}
+.dados input {
+  border: 1px solid #286BB9;
+  border-radius: 4px;
+}
+.dados input:not([type='radio']){
+  padding-left: 12px;
+}
+.dados:not(:nth-child(7)) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  padding-right: 31px;
+  border-left: 7px solid #286BB9;
+}
+.dados:nth-child(7) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border-left: 7px solid #286BB9;
+} 
+
+.dados:nth-child(7),.dados:nth-child(4) {
+  display: inline;
+}
+
+.dados input[type='text'], .dados select, .dados input[type='email'] {
+  height: 40px;
+}
+
+.dados:nth-child(4) label:nth-child(1) {
+  display:block;
+}
+.dados > input[type='text'] {
+  width: 777px;
+}
+#botao > *{
+  background-color: #286BB9;
+  padding: 13px 30px 13px 30px;
+  border-radius: 8px;
+  border: none;
+  color: #FBFCFF;
+  margin-top: 32px;
+}
+#botao input:hover{
+  cursor: pointer;
+}
+#botao input:focus{
+  background-color: #438adb;
+}
