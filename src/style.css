@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #484946;
 }
 
 #app {
@@ -32,13 +34,50 @@ form {
   display: flex;
   justify-content: space-between;
 }
-.dados input {
+.dados input, .dados select{
   border: 1px solid #286BB9;
   border-radius: 4px;
 }
-.dados input:not([type='radio']){
+.dados:nth-child(4) > label {
+  margin-bottom: 2px;
+}
+.dados div input[type='radio']{
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+}
+.dados div input[type='radio']:checked{
+  appearance: auto;
+  transform: scale(1.05);
+}
+
+
+.dados > label::before{
+  content: '* ';
+  color: red;
+}
+
+.dados {
+  font-size: 14px
+}
+.dados > label:nth-child(1){
+  font-weight: 600;
+
+}
+
+.dados input:not([type='radio']), .dados select{
   padding-left: 12px;
 }
+.dados select {
+  appearance: none;
+  background-image: url("../public/seta.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center; /* Ajusta a posição */
+  padding-right: 30px;
+}
+
+
 .dados:not(:nth-child(7)) {
   display: flex;
   flex-direction: column;
@@ -47,6 +86,7 @@ form {
   padding-left: 24px;
   padding-right: 31px;
   border-left: 7px solid #286BB9;
+  gap: 3px;
 }
 .dados:nth-child(7) {
   display: flex;
@@ -57,13 +97,32 @@ form {
   border-left: 7px solid #286BB9;
 } 
 
-.dados:nth-child(7),.dados:nth-child(4) {
-  display: inline;
+.dados:nth-child(7){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.dados:nth-child(4) div label:nth-child(2){
+ margin-right: 30px;
+}
+.dados:nth-child(4) div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .dados input[type='text'], .dados select, .dados input[type='email'] {
   height: 40px;
+  outline: none;
+  font-weight: 600;
 }
+.dados input[type='text']::placeholder, .dados select, .dados input[type='email']::placeholder {
+  height: 40px;
+  outline: none;
+  font-weight: normal;
+}
+
 
 .dados:nth-child(4) label:nth-child(1) {
   display:block;
@@ -71,6 +130,41 @@ form {
 .dados > input[type='text'] {
   width: 777px;
 }
+.dados:nth-child(6) input{
+  height: 70px;
+}
+
+.dados input[type='checkbox'] {
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 0px;
+  border: 1.5px solid #438adb;
+}
+.dados input[type='checkbox']:checked{
+  appearance: auto;
+  transform: scale(1.15);
+
+}
+form .dados:nth-child(6) textarea:nth-child(2)::placeholder{
+  font-weight: normal;
+}
+form .dados:nth-child(6) textarea:nth-child(2){
+  border: 1px solid #438adb;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  height: 70px;
+  padding: 5px;
+  font-weight: 600;
+
+}
+
+
+.asteristico {
+  color: red;
+}
+
 #botao > *{
   background-color: #286BB9;
   padding: 13px 30px 13px 30px;
@@ -81,7 +175,9 @@ form {
 }
 #botao input:hover{
   cursor: pointer;
+  filter:brightness(1.2);
 }
 #botao input:focus{
   background-color: #438adb;
+  filter:brightness(0.8);
 }

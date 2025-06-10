@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
   </head>
@@ -14,35 +17,37 @@
         <p>Prazo para responder: <strong>05/05/2025</strong></p>
       </div>
       <div class="dados">
-        <label for="nome">Nome</label>
+        <label for="nome">Nome:</label>
         <input type="text" id="nome" placeholder="Ex.:Maria de Oliveira">
       </div>
       <div class="dados">
-        <label for="email">E-mail</label>
+        <label for="email">E-mail:</label>
         <input type="email" placeholder="Ex.:maria.oliveira@gmail.com">
       </div>
       <div class="dados">
-        <label for="sexo">Sexo</label>
-        <input type="radio" name="sexo" id="sexo_masculino">
-        <label for="sexo_masculino">Masculino</label>
-        <input type="radio" name="sexo" id="sexo_feminino">
-        <label for="sexo_feminino">Feminino</label>
+        <label for="sexo">Sexo:</label>
+        <div>
+          <input type="radio" name="sexo" id="sexo_masculino">
+          <label for="sexo_masculino">Masculino</label>
+          <input type="radio" name="sexo" id="sexo_feminino">
+          <label for="sexo_feminino">Feminino</label>
+        </div>
       </div>
       <div class="dados">
-        <label for="curso">Curso</label>
+        <label for="curso">Curso:</label>
         <select name="" id="">
           <option value="">HTML e CSS</option>
         </select>
       </div>
       <div class="dados">
         <label for="observacao">Descreva o atendimento especial(opcional):</label>
-        <input type="text">
+        <textarea name="" id="observacao" placeholder="Digite algo..."></textarea>
       </div>
       <div class="dados">
         <input type="checkbox" id="checkbox">
         <label for="checkbox">Estou de acordo com os termos de serviço</label>
       </div>
-      <div>Os campos marcados com * são obrigatórios</div>
+      <div>Os campos marcados com <span class="asteristico">*</span> são obrigatórios</div>
       <div id="botao">
         <input type="submit" value="Realizar inscrição">
       </div>
