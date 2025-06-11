@@ -53,7 +53,7 @@ form {
 }
 
 
-.dados > label::before{
+.dados:not(:nth-child(6)) > label::before{
   content: '* ';
   color: red;
 }
@@ -177,7 +177,7 @@ form .dados:nth-child(6) textarea:nth-child(2){
   cursor: pointer;
   filter:brightness(1.2);
 }
-#botao input:focus{
+#botao input:active{
   background-color: #438adb;
   filter:brightness(0.8);
 }

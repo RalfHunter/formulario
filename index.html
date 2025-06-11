@@ -18,33 +18,40 @@
       </div>
       <div class="dados">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Ex.:Maria de Oliveira">
+        <input type="text" id="nome" name="name" placeholder="Ex.:Maria de Oliveira">
       </div>
       <div class="dados">
         <label for="email">E-mail:</label>
-        <input type="email" placeholder="Ex.:maria.oliveira@gmail.com">
+        <input type="email" name="email" placeholder="Ex.:maria.oliveira@gmail.com">
       </div>
       <div class="dados">
         <label for="sexo">Sexo:</label>
         <div>
-          <input type="radio" name="sexo" id="sexo_masculino">
+          <input type="radio" name="sexo" id="sexo_masculino" value="masculino">
           <label for="sexo_masculino">Masculino</label>
-          <input type="radio" name="sexo" id="sexo_feminino">
+          <input type="radio" name="sexo" id="sexo_feminino" value="feminino">
           <label for="sexo_feminino">Feminino</label>
         </div>
       </div>
       <div class="dados">
         <label for="curso">Curso:</label>
-        <select name="" id="">
-          <option value="">HTML e CSS</option>
+        <select name="curso" id="">
+          <option value="" selected disabled hidden>Escolher</option>
+          <option value="html_css">HTML e CSS</option>
+          <option value="python">Python</option>
+          <option value="javascript">Javascript</option>
+          <option value="docker">Docker</option>
+          <option value="virtual_box">Virtual Box</option>
+          <option value="mongodb">MongoDB</option>
+          <option value="typescript">Typescript</option>
         </select>
       </div>
       <div class="dados">
         <label for="observacao">Descreva o atendimento especial(opcional):</label>
-        <textarea name="" id="observacao" placeholder="Digite algo..."></textarea>
+        <textarea name="obs" id="observacao" placeholder="Digite algo..."></textarea>
       </div>
       <div class="dados">
-        <input type="checkbox" id="checkbox">
+        <input type="checkbox" id="checkbox" name="termos">
         <label for="checkbox">Estou de acordo com os termos de serviço</label>
       </div>
       <div>Os campos marcados com <span class="asteristico">*</span> são obrigatórios</div>
