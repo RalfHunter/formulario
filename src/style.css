@@ -201,9 +201,6 @@ form .dados:nth-child(6) textarea:nth-child(2){
   filter:brightness(0.8);
 }
 
-.dados select {
-  color: yellow;
-}
 /* MODO DARK SOULS */
 .info.dark, .dados.dark{
   background-color: #373636;
