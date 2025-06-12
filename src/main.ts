@@ -1,12 +1,29 @@
 import { ZodError } from 'zod';
 import './style.css';
 import formulario from './validation';
+import { url } from 'zod/v4-mini';
 
-// const app = document.querySelector('#app')!;
+const app = document.querySelector('#app')!;
 const form = document.querySelector('form')!;
 const termo = form.querySelector<HTMLInputElement>('#checkbox')!;
+const mode = form.querySelector<HTMLInputElement>('.modo')!
+const celest = mode.querySelector<HTMLImageElement>('img')!
+const urlLocal = window.location.href
+const dados = form.querySelectorAll<HTMLDivElement>('.dados')!
+const info = form.querySelector<HTMLDivElement>('.info')!
 
 // let campos = []
+mode.addEventListener('click', () => {
+    mode.classList.toggle('dark')
+    form.classList.toggle('dark')
+    app.classList.toggle('dark')
+    info.classList.toggle('dark')
+    dados.forEach(dado => {
+        dado.classList.toggle('dark')
+    })
+    celest.src = celest.src === urlLocal+"public/moon-star%201.svg" ? urlLocal+"public/sun-moon%201.svg": urlLocal+"public/moon-star%201.svg" 
+
+})
 termo.addEventListener('invalid', function () {
     this.setCustomValidity("Você precisa aceitar os termos antes de enviar o formulário.");
 });

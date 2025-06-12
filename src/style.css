@@ -19,6 +19,7 @@ form {
 .info, .dados {
   background-color: #F1F1F199;
   border-radius: 0px 8px 8px 0px;
+  transition: .5s;
 }
 .info {
   border-radius: 8px;
@@ -34,6 +35,20 @@ form {
   display: flex;
   justify-content: space-between;
 }
+
+.info h1 .modo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+.info h1 .modo:hover {
+  cursor: pointer;
+}
+
 .dados input, .dados select{
   border: 1px solid #286BB9;
   border-radius: 4px;
@@ -46,6 +61,7 @@ form {
   height: 14px;
   width: 14px;
   border-radius: 50%;
+  transition: .5s;
 }
 .dados div input[type='radio']:checked{
   appearance: auto;
@@ -116,6 +132,7 @@ form {
   height: 40px;
   outline: none;
   font-weight: 600;
+  transition: .5s;
 }
 .dados input[type='text']::placeholder, .dados select, .dados input[type='email']::placeholder {
   height: 40px;
@@ -129,6 +146,7 @@ form {
 }
 .dados > input[type='text'] {
   width: 777px;
+  transform: .5s;
 }
 .dados:nth-child(6) input{
   height: 70px;
@@ -157,6 +175,7 @@ form .dados:nth-child(6) textarea:nth-child(2){
   height: 70px;
   padding: 5px;
   font-weight: 600;
+  transition: .5s;
 
 }
 
@@ -180,4 +199,55 @@ form .dados:nth-child(6) textarea:nth-child(2){
 #botao input:active{
   background-color: #438adb;
   filter:brightness(0.8);
+}
+
+.dados select {
+  color: yellow;
+}
+/* MODO DARK SOULS */
+.info.dark, .dados.dark{
+  background-color: #373636;
+}
+#app.dark {
+  background-color:#1E1E1E;
+}
+
+.dados.dark input[type='text'], .dados.dark input[type='email'], .dados.dark textarea,
+.dados.dark select {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+}
+.dados.dark input[name='sexo'], .dados.dark input[type='checkbox'] {
+  background-color: #FFFFFF;
+}
+.info.dark h1, .info.dark p, .info.dark p strong {
+  color: #FFFFFF;
+}
+.dados.dark label {
+  color: #FFFFFF;
+}
+.dados.dark input::placeholder{
+  color:#8F8D99;
+}
+
+#formulario.dark div:nth-child(8) {
+  color: #FCFDFC;
+}
+
+.dados.dark select {
+  appearance: none;
+  background-image: url("../public/seta.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center; /* Ajusta a posição */
+  padding-right: 30px;
+  color: #8F8D99;
+}
+.dados.dark select > option{
+  color: #8F8D99;
+}
+
+/* IMPEDI QUE AO SELECIONAR UMA SUJESTÃO DE EMAIL OU NOME O CAMPO FICO COM FUNDO BRANCO */
+.dados.dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+  -webkit-text-fill-color: #fff !important;
 }
