@@ -91,8 +91,8 @@ form {
   background-repeat: no-repeat;
   background-position: right 18px center; /* Ajusta a posição */
   padding-right: 30px;
+  background-color: #fff;
 }
-
 
 .dados:not(:nth-child(7)) {
   display: flex;
