@@ -243,7 +243,7 @@ form .dados:nth-child(6) textarea:nth-child(2){
   color: #8F8D99;
 }
 
-/* IMPEDI QUE AO SELECIONAR UMA SUJESTÃO DE EMAIL OU NOME O CAMPO FICO COM FUNDO BRANCO */
+/* IMPEDI QUE AO SELECIONAR UMA SUJESTÃO DE EMAIL OU NOME QUE O CAMPO FIQUE COM FUNDO BRANCO */
 .dados.dark input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
   -webkit-text-fill-color: #fff !important;
