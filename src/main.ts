@@ -3,6 +3,7 @@ import './style.css';
 import formulario from './validation';
 
 
+
 const app = document.querySelector('#app')!;
 const form = document.querySelector('form')!;
 const termo = form.querySelector<HTMLInputElement>('#checkbox')!;
@@ -64,7 +65,8 @@ form?.addEventListener('submit', (event) => {
                 console.error('Erro:', error)
                 window.alert("Falha na Conexão, não foi possivel se conectar ao banco de dados.")
             })
-
+            window.alert("Sucesso ao cadastrar!")
+            limparCampos()
     } catch (err) {
         if (err instanceof ZodError) {
             let focado = false;
@@ -124,4 +126,18 @@ function aplicarErroCampo(
     };
 
     campo.addEventListener(evento, limpar);
+}
+function limparCampos(){
+    const inputs = form.querySelectorAll<HTMLInputElement>('input')
+    inputs.forEach(input => {
+        if(input.type == 'text' || input.type =='email'){
+            input.value = ''
+        }else{
+            input.checked = false
+        }
+    })
+    const obs = form.querySelector<HTMLTextAreaElement>('textarea')!
+    obs.value = ''
+    const select = form.querySelector<HTMLSelectElement>('select')!
+    select.selectedIndex = 0
 }
