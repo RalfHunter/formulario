@@ -1,7 +1,7 @@
 import { ZodError } from 'zod';
 import './style.css';
 import formulario from './validation';
-import { url } from 'zod/v4-mini';
+
 
 const app = document.querySelector('#app')!;
 const form = document.querySelector('form')!;
